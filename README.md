@@ -83,7 +83,7 @@ Use `Authorization: Basic <base64-encoded-credentials>` for protected endpoints.
 
    
 Endpoint 	                         Method	             Auth	              Description
----------------------          | -----------------|    -------------  | -------------------------- |
+---------------------          | -----------------|  -------------  | -------------------------- |
 
 `/api/users`                          POST	            Admin	           Create a new user
 `/api/users/register`	              POST	            None             Public user registration
