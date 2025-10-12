@@ -1,0 +1,32 @@
+# Eclipse / STS
+
+.classpath
+.project
+.settings/
+.springBeans
+.sts4-cache
+
+# Maven / Gradle
+
+/target/
+/build/
+.mvn/wrapper/maven-wrapper.jar
+
+# IDEs
+*.iml
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Spring Boot sensitive properties
+application.properties
+application.yml
+
+# Temp files
+*.tmp
