@@ -82,28 +82,28 @@ Use `Authorization: Basic <base64-encoded-credentials>` for protected endpoints.
 ### Users
 
    
-Endpoint 	              Method	         Auth	              Description
---------------------- | -----------------|  --------- | ------------------------ |
+Endpoint 	              Method	             Auth	              Description
+--------------------- | -----------------|  --------- | -------------------------- |
 
-`/api/users`              POST	         Admin	      Create a new user
-`/api/users/register`	POST	         None         Public user registration
-`/api/users`              GET	             Admin	      Get all users
-`/api/users/{id}`	    GET	             Admin	      Get user by ID
-`/api/users/{id}`	    DELETE	         Admin	      Delete user
+`/api/users`              POST	            Admin	       Create a new user
+`/api/users/register`	  POST	            None         Public user registration
+`/api/users`              GET	               Admin	       Get all users
+`/api/users/{id}`	        GET	               Admin	       Get user by ID
+`/api/users/{id}`	        DELETE	            Admin	       Delete user
 
 
 ### Tasks
 
    
 Endpoint 	                        Method	         Auth	              Description
----------------------         | -----------------|  --------- | ------------------------ |
+---------------------         | -----------------|  --------- | ------------------------------- |
 
-`/api/tasks/{userId}`             POST           Admin        Create a task for a user     
-`/api/tasks`                        GET            User         Get all tasks                
-`/api/tasks/{id}`                  GET            User         Get task by ID               
-`/api/tasks/{id}`                  PUT            User         Update task                  
-`/api/tasks/{id}`                DELETE           User         Delete task                  
-`/api/tasks/user/{userId}`       GET            User         Get tasks assigned to a user 
+`/api/tasks/{userId}`             POST               Admin        Create a task for a user     
+`/api/tasks`                      GET                User         Get all tasks                
+`/api/tasks/{id}`                 GET                User         Get task by ID               
+`/api/tasks/{id}`                 PUT                User         Update task                  
+`/api/tasks/{id}`                 DELETE             User         Delete task                  
+`/api/tasks/user/{userId}`        GET                User         Get tasks assigned to a user 
 
 
 
