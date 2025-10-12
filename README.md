@@ -82,14 +82,14 @@ Use `Authorization: Basic <base64-encoded-credentials>` for protected endpoints.
 ### Users
 
    
-Endpoint 	              Method	             Auth	              Description
---------------------- | -----------------|  --------- | -------------------------- |
+Endpoint 	                         Method	             Auth	              Description
+---------------------          | -----------------|    -------------  | -------------------------- |
 
-`/api/users`              POST	            Admin	       Create a new user
-`/api/users/register`	  POST	            None         Public user registration
-`/api/users`              GET	               Admin	       Get all users
-`/api/users/{id}`	        GET	               Admin	       Get user by ID
-`/api/users/{id}`	        DELETE	            Admin	       Delete user
+`/api/users`                          POST	            Admin	           Create a new user
+`/api/users/register`	              POST	            None             Public user registration
+`/api/users`                          GET	               Admin	           Get all users
+`/api/users/{id}`	                    GET	               Admin	           Get user by ID
+`/api/users/{id}`	                    DELETE	            Admin	           Delete user
 
 
 ### Tasks
