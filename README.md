@@ -39,20 +39,18 @@ Admins (managers) and regular users (employees) can securely access the system a
 
 ## Setup Instructions
 
-1. Clone the repository
+1. **Clone the repository**
 
 ```bash
 git clone <repository-url>
 cd MyTaskManager
 ```
 
+2. **Configure MySQL Database**
 
+Create a database, e.g., `mytaskmanager`.
 
-2. Configure MySQL Database
-
-Create a database, e.g., mytaskmanager.
-
-Update application.properties:
+Update `application.properties`:
 
 ```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/mytaskmanager
@@ -70,54 +68,50 @@ mvn spring-boot:run
 
 The app runs at: `http://localhost:8080`
 
+---
+
 ## Authentication
 
-* **Admin:** `admin:adminpassword`
-* **User:** `user1:userpassword`
+* **Admin:** `admin:adminpassword`  
+* **User:** `user1:userpassword`  
 
 Use `Authorization: Basic <base64-encoded-credentials>` for protected endpoints.
+
+---
 
 ## API Endpoints
 
 ### Users
 
-   
-Endpoint 	                         Method	             Auth	              Description
----------------------          | -----------------|  -------------  | -------------------------- |
-
-`/api/users`                          POST	            Admin	           Create a new user
-`/api/users/register`	              POST	            None             Public user registration
-`/api/users`                          GET	               Admin	           Get all users
-`/api/users/{id}`	                    GET	               Admin	           Get user by ID
-`/api/users/{id}`	                    DELETE	            Admin	           Delete user
-
+| Endpoint | Method | Auth | Description |
+|-----------|---------|------|--------------|
+| `/api/users` | POST | Admin | Create a new user |
+| `/api/users/register` | POST | None | Public user registration |
+| `/api/users` | GET | Admin | Get all users |
+| `/api/users/{id}` | GET | Admin | Get user by ID |
+| `/api/users/{id}` | DELETE | Admin | Delete user |
 
 ### Tasks
 
-   
-Endpoint 	                        Method	         Auth	              Description
----------------------         | -----------------|  --------- | ------------------------------- |
+| Endpoint | Method | Auth | Description |
+|-----------|---------|------|--------------|
+| `/api/tasks/{userId}` | POST | Admin | Create a task for a user |
+| `/api/tasks` | GET | User | Get all tasks |
+| `/api/tasks/{id}` | GET | User | Get task by ID |
+| `/api/tasks/{id}` | PUT | User | Update task |
+| `/api/tasks/{id}` | DELETE | User | Delete task |
+| `/api/tasks/user/{userId}` | GET | User | Get tasks assigned to a user |
 
-`/api/tasks/{userId}`             POST               Admin        Create a task for a user     
-`/api/tasks`                      GET                User         Get all tasks                
-`/api/tasks/{id}`                 GET                User         Get task by ID               
-`/api/tasks/{id}`                 PUT                User         Update task                  
-`/api/tasks/{id}`                 DELETE             User         Delete task                  
-`/api/tasks/user/{userId}`        GET                User         Get tasks assigned to a user 
+---
 
+## Future Enhancements
 
+- JWT-based authentication for better security.  
+- Task priorities, deadlines, and status tracking.  
+- Email notifications for tasks and reminders.  
 
-
-##Future Enhancements
-
-JWT-based authentication for better security.
-
-Task priorities, deadlines, and status tracking.
-
-Email notifications for tasks and reminders.
-
+---
 
 ## License
 
 This project is licensed under the MIT License.
-
